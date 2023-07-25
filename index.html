@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flaxsoft</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/ResponsiveMenuBar-main/Menu.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!--Navbar-->
+    <div class="navbar-sticky border-bottom content-pd py-2 header-main">
+      <div class="container">
+        <!-- menu top part -->
+        <div class="row align-items-center mb-3">
+          <div class="col-5 col-sm-4 col-lg-3 mb-3 mb-lg-0">
+            <div class="d-flex align-items-center">
+              <a
+                class="align-items-center d-flex mr-3 navbar-brand"
+                href="index.html"
+              >
+                <img src="assets/img/fs_logo.png" alt="" height="32" />
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-sm-8 col-lg-6 mx-auto order-3 order-lg-0">
+            <!-- Search-->
+            <div class="position-relative w-100">
+              <button
+                type="button"
+                class="align-items-center btn-category d-flex justify-content-center p-0 rounded-circle position-absolute"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 2.75a7.25 7.25 0 015.63 11.82l4.9 4.9a.75.75 0 01-.98 1.13l-.08-.07-4.9-4.9A7.25 7.25 0 1110 2.75zm0 1.5a5.75 5.75 0 100 11.5 5.75 5.75 0 000-11.5z"
+                  ></path>
+                </svg>
+              </button>
+              <!-- Search input -->
+              <input
+                class="form-control search-control"
+                type="search"
+                placeholder="Search for Products"
+              />
+            </div>
+          </div>
+          <div class="col-7 col-sm-8 col-lg-3 mb-3 mb-lg-0">
+            <!-- Toolbar-->
+            <div
+              class="navbar-toolbar d-flex justify-content-end align-items-center"
+            >
+              <button class="btn btn-outline-secondary py-1 px-2" type="button">
+                <span class="me-2 sign-none">Sign in</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="signin-svg icon icon-tabler icon-tabler-user-plus"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+                  <path d="M16 19h6"></path>
+                  <path d="M19 16v6"></path>
+                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
+                </svg>
+              </button>
+              <!-- notification -->
+
+              <div class="dropdown custom-dropdown ms-3 me-2">
+                <a
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  class="dropdown-link"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-bell"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"
+                    ></path>
+                    <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+                  </svg>
+                  <span class="number">5</span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <div class="title-wrap d-flex align-items-center">
+                    <h3 class="title mb-0">Notifications</h3>
+                    <a href="#" class="small ml-auto">Mark all as read</a>
+                  </div>
+                  <ul class="custom-notifications">
+                    <li class="unread">
+                      <a href="#" class="d-flex">
+                        <div class="img mr-3">
+                          <img
+                            src="assets/img/fs_logo.png"
+                            alt="Image"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <div class="text">
+                          <strong>Claudia Gideon</strong> marked the task done a
+                          day ago
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <p class="text-center m-0 p-0">
+                    <a href="#" class="small">View All</a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- settings  -->
+
+              <button class="btn" type="button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-settings"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"
+                  ></path>
+                  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- menu bottom part -->
+        <div class="row">
+          <div class="col-12 d-flex align-items-center">
+            <div class="d-flex align-items-center">
+              <button
+                type="button"
+                class="btn btn-menu me-2 px-1"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon icon-tabler icon-tabler-menu-2"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 6l16 0"></path>
+                  <path d="M4 12l16 0"></path>
+                  <path d="M4 18l16 0"></path>
+                </svg>
+              </button>
+              <!-- main menu item  -->
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link px-2 fs-14 color-1" href="#">Discover</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link px-2 fs-14 color-1" href="#">Following</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link px-2" href="#">|</a>
+                </li>
+              </ul>
+            </div>
+            <!-- menu responsive item  -->
+            <div class="rowContainer">
+              <div id="header">
+                <div class="menuContainer opacity0">
+                  <div class="menuLink" urlto="01.html">Menu Item 1</div>
+                  <div class="menuLink" urlto="02.html">Menu Item 2</div>
+                  <div class="menuLink" urlto="03.html">Menu Item 3</div>
+                  <div class="menuLink" urlto="04.html">Menu Item 4</div>
+                  <div class="menuLink" urlto="05.html">Menu Item 5</div>
+                  <div class="menuLink" urlto="06.html">Menu Item 6</div>
+                  <div class="menuLink" urlto="07.html">Menu Item 7</div>
+                  <div class="menuLink" urlto="08.html">Menu Item 8</div>
+                </div>
+                <div class="iconExileMenu displayNone">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-dots"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                    <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                    <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                  </svg>
+                </div>
+                <div class="exileMenuContainer displayNone"></div>
+              </div>
+            </div>
+          </div>
+          <!-- sidebar menu start  -->
+          <div
+            class="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabindex="-1"
+            id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel"
+          >
+            <div class="offcanvas-header">
+              <img src="assets/img/fs_logo.png" alt="" height="32" />
+              <!-- <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdroped with scrolling</h5> -->
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <nav class="sidebar sidebar-bunker">
+                <div class="sidebar-body">
+                  <nav class="sidebar-nav">
+                    <ul class="metismenu">
+                      <li>
+                        <a href="#"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-home me-2"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            ></path>
+                            <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+                            <path
+                              d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
+                            ></path>
+                            <path
+                              d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"
+                            ></path>
+                          </svg>
+                          My Feed</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-user-circle me-2"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            ></path>
+                            <path
+                              d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+                            ></path>
+                            <path
+                              d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"
+                            ></path>
+                            <path
+                              d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"
+                            ></path>
+                          </svg>
+                          Profile</a
+                        >
+                      </li>
+                      <li class="mm-active">
+                        <a class="has-arrow material-ripple" href="#">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-shopping-cart me-2"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            ></path>
+                            <path
+                              d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"
+                            ></path>
+                            <path
+                              d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"
+                            ></path>
+                            <path d="M17 17h-11v-14h-2"></path>
+                            <path d="M6 5l14 1l-1 7h-13"></path>
+                          </svg>
+                          Shopping
+                        </a>
+                        <ul class="nav-second-level">
+                          <li class="mm-active"><a href="#">Buy Driect</a></li>
+                          <li><a href="#">Shopping Item</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a class="has-arrow material-ripple" href="#"
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-shopping-cart me-2"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            stroke="currentColor"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"
+                            ></path>
+                            <path
+                              d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"
+                            ></path>
+                            <path
+                              d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"
+                            ></path>
+                            <path d="M17 17h-11v-14h-2"></path>
+                            <path d="M6 5l14 1l-1 7h-13"></path>
+                          </svg>
+                          Sidebar
+                        </a>
+                        <ul class="nav-second-level">
+                          <li><a href="#">Sidebar item</a></li>
+                          <li>
+                            <a class="has-arrow" href="#" aria-expanded="false"
+                              >Sidebar item</a
+                            >
+                            <ul class="nav-third-level">
+                              <li><a href="#">Sidebar item second</a></li>
+                              <li><a href="#">Sidebar item second</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- sidebar-body -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/plugins/jquery/jquery.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="assets/plugins/ResponsiveMenuBar-main/jquery.ResponsiveMenuBar.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+    <script src="assets/js/perfect-scrollbar.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+      $(document).ResponsiveMenuBar({
+        funcClickOnActive: null,
+        showDebugInfo: true,
+      });
+    </script>
+  </body>
+</html>
