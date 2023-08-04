@@ -1,0 +1,169 @@
+/*
+ * We are hiding the invisible nav outside the screen
+ * so we need to avoid the horizontal scroll
+ */
+/* body.okayNav-loaded {
+  overflow-x: hidden;
+} */
+.okayNav-header {
+  /* position: fixed;
+  top: 0; */
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.okayNav:not(.loaded) {
+  visibility: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.okayNav ul {
+  /* We want two navigations - one hidden and one visible */
+  float: left;
+}
+.okayNav a {
+  position: relative;
+  z-index: 1;
+}
+.okayNav__nav--visible {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.okayNav__nav--visible li {
+  display: inline-block;
+}
+.okayNav__nav--visible a {
+  /* Link styling for the visible part of the nav */
+  display: block;
+  padding: 5px 15px;
+  transition: color 200ms cubic-bezier(0.55, 0, 0.1, 1);
+}
+.okayNav__nav--visible:empty ~ .okayNav__menu-toggle {
+  top: 0;
+}
+/* Link styling for the off-screen part of the nav */
+.okayNav__nav--invisible {
+  position: absolute;
+  top: 47px;
+  bottom: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-left: 0px;
+}
+.okayNav__nav--invisible a {
+  display: block;
+  padding: 5px 15px;
+  background: #fff;
+}
+.okayNav__nav--invisible.nav-left {
+  left: 0;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.okayNav__nav--invisible.nav-right {
+  right: 0;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+/* .okayNav__nav--invisible.transition-enabled {
+  transition: -webkit-transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 400ms cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
+} */
+.okayNav__nav--invisible.nav-open {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  box-shadow: 0 0 6px 0 rgb(0 0 0/25%);
+  height: max-content;
+}
+@media (min-width: 600px) {
+  .okayNav__nav--invisible.nav-open {
+    /* right: 100px; */
+  }
+}
+/* Kebab icon */
+.okayNav__menu-toggle {
+  position: relative;
+  z-index: 1;
+  top: 8px;
+  float: left;
+  width: 40px;
+  height: 18px;
+  cursor: pointer;
+  transition: -webkit-transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 400ms cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
+}
+.okayNav__menu-toggle.okay-invisible {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+}
+.okayNav__menu-toggle span {
+  position: absolute;
+  right: 0;
+  left: 0;
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin: auto;
+  pointer-events: none;
+  border-radius: 50%;
+}
+.okayNav__menu-toggle span:nth-child(1) {
+  top: 0;
+}
+.okayNav__menu-toggle span:nth-child(2) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.okayNav__menu-toggle span:nth-child(3) {
+  bottom: 0;
+}
+.okayNav__menu-toggle.icon--active {
+  /* Kebab icon when off-screen nav is open */
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.okayNav-header {
+  background-color: #fff;
+  position: relative;
+}
+.okayNav a {
+  color: #888;
+  font-size: 14px;
+  text-decoration: none;
+}
+.okayNav a:hover {
+  color: #546edb;
+}
+.okayNav__nav--visible a:hover {
+  color: #546edb;
+}
+.okayNav__nav--invisible {
+  background: #fff;
+}
+.okayNav__menu-toggle span {
+  background: #2e2e33;
+}
+.okayNav__menu-toggle.icon--active span {
+  background: #546edb;
+}

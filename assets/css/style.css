@@ -75,6 +75,7 @@ body {
   overflow-x: hidden;
   padding: 0px;
 }
+
 .form-control:focus {
 border-color: #dee2e6;
 box-shadow: 0 0 6px 0 rgb(43 42 42 / 16%);
@@ -167,25 +168,10 @@ box-shadow: 0 0 6px 0 rgb(43 42 42 / 16%);
   transition: all 0.5s ease-in-out;
 }
 
-@media (min-width: 768px) {
-  .sidebar.active {
-    /*margin-left: -250px*/
-  }
-  /*    .sidebar-mini .sidebar.active{
-              margin-left: 0;
-              min-width: 250px;
-              max-width: 250px;
-      
-          }*/
-}
 
 @media (max-width: 767px) {
   .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
     height: 100vh;
-    z-index: 999;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     overflow-y: scroll;
@@ -542,14 +528,15 @@ box-shadow: 0 0 6px 0 rgb(43 42 42 / 16%);
 
 .sidebar-nav ul li a:hover {
   color: rgb(37 88 182);
-  background-color: rgb(235 235 235);
+  /* background-color: rgb(235 235 235); */
+  background-color: rgb(255 252 252);
+  box-shadow: 2px 2px 6px #d1d2d7, -6px -6px 12px #fff;
 }
 
 .sidebar-nav ul li.mm-active a {
-  color: #fff;
-  /* background-color: linear-gradient(45deg, #303f9f, #1976d2); */
-  background-color: #303f9f;
-  box-shadow: 0 0 10px 1px #2873e359;
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 6px #d1d2d7, -6px -6px 12px #fff;
 }
 
 .sidebar-nav ul li.mm-active a i {
@@ -558,6 +545,7 @@ box-shadow: 0 0 6px 0 rgb(43 42 42 / 16%);
 
 .sidebar-nav ul li .nav-second-level li {
   padding: 0;
+  margin: 10px 0px;
 }
 
 .sidebar-nav ul li .nav-second-level li:before {
@@ -613,7 +601,6 @@ box-shadow: 0 0 6px 0 rgb(43 42 42 / 16%);
 }
 
 .sidebar-nav ul li a i {
-  /*font-size: 23px;*/
   font-size: 21px;
   line-height: 1;
   margin-right: 0.5rem;
