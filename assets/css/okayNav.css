@@ -54,6 +54,7 @@
   top: 0;
 }
 /* Link styling for the off-screen part of the nav */
+@media (min-width:401px){
 .okayNav__nav--invisible {
   position: absolute;
   top: 47px;
@@ -61,6 +62,17 @@
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   padding-left: 0px;
+}
+}
+@media (max-width:400px) {
+  .okayNav__nav--invisible {
+    position: absolute;
+    top: 38px;
+    bottom: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 0px;
+}  
 }
 .okayNav__nav--invisible a {
   display: block;
