@@ -64,10 +64,20 @@
   padding-left: 0px;
 }
 }
-@media (max-width:400px) {
+@media (min-width:373px) and (max-width:400px) {
   .okayNav__nav--invisible {
     position: absolute;
-    top: 38px;
+    top: 48px;
+    bottom: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 0px;
+}  
+}
+@media (max-width:372px) {
+  .okayNav__nav--invisible {
+    position: absolute;
+    top: 39px;
     bottom: 0;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
